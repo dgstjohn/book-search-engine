@@ -39,6 +39,7 @@ mutation saveBook($input: SaveBookInput) {
             link
     }
 }
+}
 `;
 
 export const REMOVE_BOOK = gql`
