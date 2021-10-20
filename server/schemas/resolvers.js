@@ -1,4 +1,3 @@
-// placeholder code for structure only, still to write
 
 const { User } = require('../models');
 const { AuthenticationError } = require('apollo-server-express');
@@ -42,6 +41,7 @@ const resolvers = {
     },
 
     saveBook: async (parent, { input }, context) => {
+      console.log(context.user)
       if (context.user) {
         const updatedUser = await User.findOneAndUpdate(
           { _id: context.user._id },
